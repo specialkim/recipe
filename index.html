@@ -1,15 +1,53 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>맛있는 레시피 - 제휴 문의</title>
   <link href='/style.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <main class="container">
+    <header class="hero">
+      <h1>제휴 및 비즈니스 문의</h1>
+      <p>함께 더 맛있는 미래를 만들어가요. <br> 제휴 제안이나 궁금하신 점을 남겨주시면 빠르게 답변 드리겠습니다.</p>
+    </header>
+
+    <section class="form-wrapper">
+      <form action="https://formspree.io/f/xnjbglqj" method="POST" id="partnership-form">
+        <div class="form-group">
+          <label for="name">성함 / 업체명</label>
+          <input type="text" name="name" id="name" required placeholder="예: 김레시피 / 맛나컴퍼니">
+        </div>
+
+        <div class="form-group">
+          <label for="email">이메일 주소</label>
+          <input type="email" name="_replyto" id="email" required placeholder="example@domain.com">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">문의 주제</label>
+          <select name="subject" id="subject">
+            <option value="partnership">제휴 제안</option>
+            <option value="advertising">광고 문의</option>
+            <option value="content">콘텐츠 협업</option>
+            <option value="other">기타</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">상세 내용</label>
+          <textarea name="message" id="message" rows="5" required placeholder="제휴 내용이나 궁금하신 점을 상세히 적어주세요."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">문의 보내기</button>
+      </form>
+    </section>
+  </main>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
-
