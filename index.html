@@ -1,53 +1,144 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>맛있는 레시피 - 제휴 문의</title>
-  <link href='/style.css' rel='stylesheet'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dubai Chewy Cookie Recipe | 두쫀쿠 레시피</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="container">
-    <header class="hero">
-      <h1>제휴 및 비즈니스 문의</h1>
-      <p>함께 더 맛있는 미래를 만들어가요. <br> 제휴 제안이나 궁금하신 점을 남겨주시면 빠르게 답변 드리겠습니다.</p>
-    </header>
+  <!-- 언어 전환 (기본: 영문) -->
+  <header class="header">
+    <div class="header_inner">
+      <h1 class="logo"><span class="logo_emoji">🍪</span><span data-ko="두쫀쿠 레시피" data-en="Dubai Chewy Cookie Recipe">Dubai Chewy Cookie Recipe</span></h1>
+      <div class="lang_switch">
+        <button type="button" class="contact_btn" id="open_contact" data-ko="제휴 문의" data-en="Contact">Contact</button>
+        <button type="button" class="lang_btn" data-lang="ko" aria-label="한국어">한글</button>
+        <button type="button" class="lang_btn active" data-lang="en" aria-label="English">EN</button>
+      </div>
+    </div>
+  </header>
 
-    <section class="form-wrapper">
-      <form action="https://formspree.io/f/xnjbglqj" method="POST" id="partnership-form">
-        <div class="form-group">
-          <label for="name">성함 / 업체명</label>
-          <input type="text" name="name" id="name" required placeholder="예: 김레시피 / 맛나컴퍼니">
+  <main class="main">
+    <!-- 소개 + 장원영 -->
+    <section class="section intro_section">
+      <h2 class="section_title"><span class="title_emoji">🍫</span><span data-ko="두쫀쿠란?" data-en="What is Dubai Chewy Cookie?">What is Dubai Chewy Cookie?</span></h2>
+      <div class="intro_content">
+        <p class="intro_text" data-ko="두쫀쿠(두바이 쫀득 쿠키)는 볶은 카다이프와 피스타치오 크림을 넣고, 코코아가 든 쫄깃한 마시멜로로 감싼 디저트예요. 두바이 초콜릿을 쿠키 형태로 재해석한 인기 디저트입니다."
+          data-en="Dubai Chewy Cookie is a dessert with roasted kadaif and pistachio cream inside, wrapped in chewy marshmallow with cocoa. It's a popular reinterpretation of Dubai chocolate in cookie form."></p>
+        <div class="wonyoung_card">
+          <span class="wonyoung_label" data-ko="💜 장원영(IVE)이 정말 좋아하는 디저트" data-en="💜 Jang Wonyoung (IVE)'s favorite dessert">💜 Jang Wonyoung (IVE)'s favorite dessert</span>
+          <p class="wonyoung_text" data-ko="장원영은 '내 마음속엔 아직도 두바이 초코가 있다', '두바이 초콜릿에 꽂혀 있다. 이건 유행이 아니라 스테디'라고 말하며 두쫀쿠를 사랑해요. 인스타에 '나는 키티 두쫀쿠' 포스팅으로 애정을 드러내기도 했답니다!"
+            data-en="Jang Wonyoung has said 'I still have Dubai chocolate in my heart' and 'I'm hooked on Dubai chocolate. It's not a trend, it's a staple.' She even posted 'I'm Kitty Dubai Chewy Cookie' on Instagram!"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 필요한 도구/기계 -->
+    <section class="section tools_section">
+      <h2 class="section_title"><span class="title_emoji">🛠️</span><span data-ko="필요한 도구" data-en="Equipment Needed">Equipment Needed</span></h2>
+      <ul class="tools_list">
+        <li><span class="tool_emoji">🍳</span><span data-ko="프라이팬 또는 냄비 (카다이프/대체재 볶기)" data-en="Frying pan or pot (for roasting kadaif/substitute)">Frying pan or pot (for roasting kadaif/substitute)</span></li>
+        <li><span class="tool_emoji">🥣</span><span data-ko="볼 2~3개 (필링·마시멜로 분리)" data-en="2–3 bowls (for filling & marshmallow)">2–3 bowls (for filling &amp; marshmallow)</span></li>
+        <li><span class="tool_emoji">🧊</span><span data-ko="냉동실 (필링 굳히기)" data-en="Freezer (to set the filling)">Freezer (to set the filling)</span></li>
+        <li><span class="tool_emoji">🧤</span><span data-ko="장갑 (마시멜로 성형 시 손에 묻지 않게)" data-en="Gloves (when shaping marshmallow)">Gloves (when shaping marshmallow)</span></li>
+        <li><span class="tool_emoji">📋</span><span data-ko="체 (가루 체치기)" data-en="Sieve (for sifting powder)">Sieve (for sifting powder)</span></li>
+        <li><span class="tool_emoji">🔥</span><span data-ko="전자레인지 또는 가스레인지 (마시멜로 녹이기)" data-en="Microwave or stove (to melt marshmallow)">Microwave or stove (to melt marshmallow)</span></li>
+      </ul>
+    </section>
+
+    <!-- 레시피 종류 -->
+    <section class="section recipes_section">
+      <h2 class="section_title"><span class="title_emoji">📖</span><span data-ko="레시피 종류" data-en="Recipe Types">Recipe Types</span></h2>
+      <div class="recipe_cards">
+        <article class="recipe_card" data-recipe="kadaif">
+          <div class="recipe_card_emoji">🥇</div>
+          <h3 class="recipe_name" data-ko="클래식 (카다이프)" data-en="Classic (Kadaif)">Classic (Kadaif)</h3>
+          <p class="recipe_desc" data-ko="전통적인 카다이프를 사용한 레시피. 쫄깃하고 바삭한 식감."
+            data-en="Traditional recipe using kadaif. Chewy and crispy texture."></p>
+          <button type="button" class="btn_simulate" data-ko="이 레시피로 시뮬레이션 ▶️" data-en="Simulate this recipe ▶️">Simulate this recipe ▶️</button>
+        </article>
+        <article class="recipe_card" data-recipe="breadcrumb">
+          <div class="recipe_card_emoji">🍞</div>
+          <h3 class="recipe_name" data-ko="빵가루 버전" data-en="Breadcrumb Version">Breadcrumb Version</h3>
+          <p class="recipe_desc" data-ko="카다이프 대신 빵가루를 버터에 볶아 사용. 구하기 쉽고 비슷한 바삭함."
+            data-en="Use breadcrumbs fried in butter instead of kadaif. Easy to find, similar crispiness."></p>
+          <button type="button" class="btn_simulate" data-ko="이 레시피로 시뮬레이션 ▶️" data-en="Simulate this recipe ▶️">Simulate this recipe ▶️</button>
+        </article>
+        <article class="recipe_card" data-recipe="vermicelli">
+          <div class="recipe_card_emoji">🍝</div>
+          <h3 class="recipe_name" data-ko="버미셀리(페니면) 버전" data-en="Vermicelli (Pasta) Version">Vermicelli (Pasta) Version</h3>
+          <p class="recipe_desc" data-ko="버미셀리면을 버터에 볶아 카다이프 대체. 식감이 가장 유사."
+            data-en="Vermicelli fried in butter as kadaif substitute. Closest texture to classic."></p>
+          <button type="button" class="btn_simulate" data-ko="이 레시피로 시뮬레이션 ▶️" data-en="Simulate this recipe ▶️">Simulate this recipe ▶️</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- 시뮬레이션 영역 -->
+    <section class="section simulation_section" id="simulation_section">
+      <h2 class="section_title"><span class="title_emoji">👩‍🍳</span><span data-ko="레시피 시뮬레이션" data-en="Recipe Simulation">Recipe Simulation</span></h2>
+      <p class="simulation_hint"><span class="hint_emoji">💡</span><span data-ko="위에서 레시피를 선택한 뒤, 단계별로 진행해 보세요. 각 단계의 예상 시간이 표시됩니다."
+        data-en="Select a recipe above, then follow the steps. Estimated time is shown for each step.">Select a recipe above, then follow the steps. Estimated time is shown for each step.</span></p>
+
+      <div class="simulation_box hidden" id="simulation_box">
+        <div class="simulation_header">
+          <span class="simulation_recipe_name" id="simulation_recipe_name">—</span>
+          <button type="button" class="btn_reset" data-ko="🔄 처음부터" data-en="🔄 Reset">🔄 Reset</button>
         </div>
 
-        <div class="form-group">
-          <label for="email">이메일 주소</label>
-          <input type="email" name="_replyto" id="email" required placeholder="example@domain.com">
+        <!-- 재료 표시 -->
+        <div class="ingredients_block">
+          <h4 class="ingredients_title"><span class="ingredients_emoji">🥗</span><span data-ko="필요 재료 (한 번 분량)" data-en="Ingredients (one batch)">Ingredients (one batch)</span></h4>
+          <ul class="ingredients_list" id="ingredients_list"></ul>
         </div>
 
-        <div class="form-group">
-          <label for="subject">문의 주제</label>
-          <select name="subject" id="subject">
-            <option value="partnership">제휴 제안</option>
-            <option value="advertising">광고 문의</option>
-            <option value="content">콘텐츠 협업</option>
-            <option value="other">기타</option>
-          </select>
+        <!-- 단계 진행 -->
+        <div class="steps_block">
+          <h4 class="steps_title"><span class="steps_emoji">📝</span><span data-ko="조리 단계" data-en="Cooking Steps">Cooking Steps</span></h4>
+          <div class="step_progress">
+            <span class="step_counter" id="step_counter" data-ko="단계 0 / 0" data-en="Step 0 / 0">Step 0 / 0</span>
+            <div class="progress_bar"><div class="progress_fill" id="progress_fill"></div></div>
+          </div>
+          <div class="step_content" id="step_content"></div>
+          <div class="step_timer" id="step_timer"></div>
+          <div class="step_actions">
+            <button type="button" class="btn_prev" id="btn_prev" disabled data-ko="⬅️ 이전" data-en="⬅️ Previous">⬅️ Previous</button>
+            <button type="button" class="btn_next" id="btn_next" data-ko="다음 ➡️" data-en="Next ➡️">Next ➡️</button>
+          </div>
         </div>
-
-        <div class="form-group">
-          <label for="message">상세 내용</label>
-          <textarea name="message" id="message" rows="5" required placeholder="제휴 내용이나 궁금하신 점을 상세히 적어주세요."></textarea>
-        </div>
-
-        <button type="submit" class="submit-btn">문의 보내기</button>
-      </form>
+      </div>
     </section>
   </main>
 
-  <script defer type="text/javascript" src="/main.js"></script>
+  <footer class="footer">
+    <p class="footer_text" data-ko="두쫀쿠 레시피 시뮬레이션 · 장원영이 사랑하는 디저트 💜"
+      data-en="Dubai Chewy Cookie Recipe Simulation · Jang Wonyoung's favorite dessert 💜">Dubai Chewy Cookie Recipe Simulation · Jang Wonyoung's favorite dessert 💜</p>
+  </footer>
+
+  <!-- 제휴 문의 모달 -->
+  <div class="modal_overlay" id="contact_modal">
+    <div class="modal_content">
+      <button type="button" class="modal_close" id="close_contact">&times;</button>
+      <h2 class="modal_title" data-ko="제휴 및 비즈니스 문의" data-en="Partnership Inquiry">Partnership Inquiry</h2>
+      <form action="https://formspree.io/f/xnjbglqj" method="POST" class="contact_form">
+        <div class="form_group">
+          <label for="name" data-ko="성함 / 업체명" data-en="Name / Company">Name / Company</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form_group">
+          <label for="email" data-ko="이메일 주소" data-en="Email Address">Email Address</label>
+          <input type="email" name="_replyto" id="email" required>
+        </div>
+        <div class="form_group">
+          <label for="message" data-ko="상세 내용" data-en="Message">Message</label>
+          <textarea name="message" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn_submit" data-ko="보내기" data-en="Send">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -327,6 +327,28 @@
     btn_next.addEventListener('click', nextStep);
   }
 
+  // ---------- 제휴 문의 모달 제어
+  const openContactBtn = document.getElementById('open_contact');
+  const closeContactBtn = document.getElementById('close_contact');
+  const contactModal = document.getElementById('contact_modal');
+
+  if (openContactBtn && closeContactBtn && contactModal) {
+    openContactBtn.addEventListener('click', () => {
+      contactModal.classList.add('active');
+    });
+
+    closeContactBtn.addEventListener('click', () => {
+      contactModal.classList.remove('active');
+    });
+
+    // 배경 클릭 시 닫기
+    contactModal.addEventListener('click', (e) => {
+      if (e.target === contactModal) {
+        contactModal.classList.remove('active');
+      }
+    });
+  }
+
   // ---------- 초기화: 저장된 언어 적용
   applyLanguage();
 })();
