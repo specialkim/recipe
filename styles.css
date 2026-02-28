@@ -132,6 +132,33 @@ body {
 }
 
 /* --------------------------------------------
+   목차
+   -------------------------------------------- */
+.toc_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.toc_item {
+  display: block;
+  padding: 0.75rem 1rem;
+  background: var(--color_card);
+  border-radius: 10px;
+  box-shadow: var(--shadow_card);
+  color: var(--color_primary);
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.toc_item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(124, 58, 237, 0.18);
+}
+
+/* --------------------------------------------
    소개 + 장원영 카드
    -------------------------------------------- */
 .intro_text {
@@ -160,6 +187,43 @@ body {
   color: #831843;
   font-size: 0.95rem;
   line-height: 1.65;
+}
+
+/* --------------------------------------------
+   레시피 요약
+   -------------------------------------------- */
+.overview_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.overview_card {
+  background: var(--color_card);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  box-shadow: var(--shadow_card);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+}
+
+.overview_label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color_text_soft);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.overview_value {
+  font-size: 0.95rem;
+  color: var(--color_primary);
+  font-weight: 700;
+}
+
+.overview_note {
+  color: var(--color_text_soft);
+  font-size: 0.95rem;
 }
 
 /* --------------------------------------------
@@ -254,6 +318,216 @@ body {
 
 .btn_simulate:active {
   transform: scale(0.98);
+}
+
+/* --------------------------------------------
+   클래식 레시피
+   -------------------------------------------- */
+.recipe_panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.recipe_block {
+  background: var(--color_card);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow_card);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+}
+
+.recipe_block_title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color_primary);
+}
+
+.recipe_list,
+.recipe_steps {
+  padding-left: 1.1rem;
+  color: var(--color_text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.recipe_list li,
+.recipe_steps li {
+  margin-bottom: 0.5rem;
+}
+
+.recipe_note {
+  margin-top: 1rem;
+  color: var(--color_text_soft);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------
+   준비 체크리스트
+   -------------------------------------------- */
+.checklist_list {
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.checklist_list li {
+  background: var(--color_card);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  box-shadow: var(--shadow_card);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  color: var(--color_text);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------
+   팁 & 대체재
+   -------------------------------------------- */
+.tips_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.tip_card {
+  background: var(--color_card);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  box-shadow: var(--shadow_card);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+}
+
+.tip_title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color_primary);
+  margin-bottom: 0.5rem;
+}
+
+.tip_text {
+  color: var(--color_text_soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------
+   트러블슈팅
+   -------------------------------------------- */
+.faq_list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq_item {
+  background: var(--color_card);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: var(--shadow_card);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+}
+
+.faq_q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color_primary);
+  margin-bottom: 0.4rem;
+}
+
+.faq_a {
+  color: var(--color_text_soft);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------
+   사진 & 과정
+   -------------------------------------------- */
+.gallery_note {
+  color: var(--color_text_soft);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.gallery_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery_card {
+  background: var(--color_card);
+  border-radius: var(--radius);
+  padding: 0.9rem;
+  box-shadow: var(--shadow_card);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  text-align: center;
+}
+
+.gallery_placeholder {
+  height: 140px;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #f3f4f6,
+    #f3f4f6 10px,
+    #e5e7eb 10px,
+    #e5e7eb 20px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+.gallery_caption {
+  font-size: 0.9rem;
+  color: var(--color_text);
+}
+
+/* --------------------------------------------
+   보관 & 알레르기
+   -------------------------------------------- */
+.storage_panel {
+  background: var(--color_card);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow_card);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+}
+
+.storage_text {
+  color: var(--color_text_soft);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.storage_text:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------
+   운영 정보
+   -------------------------------------------- */
+.about_panel {
+  background: var(--color_card);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow_card);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+}
+
+.about_text {
+  color: var(--color_text_soft);
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.about_text:last-child {
+  margin-bottom: 0;
 }
 
 /* --------------------------------------------
@@ -454,6 +728,12 @@ body {
   color: var(--color_text_soft);
   font-size: 0.9rem;
   margin-top: auto;
+}
+
+.footer_meta {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
 }
 
 /* --------------------------------------------
