@@ -349,6 +349,42 @@
     });
   }
 
+  // ---------- 갤러리 좌우 이동
+  const galleryGrid = document.querySelector('.gallery_grid');
+  const galleryPrev = document.getElementById('gallery_prev');
+  const galleryNext = document.getElementById('gallery_next');
+
+  function getGalleryStep() {
+    if (!galleryGrid) return 0;
+    const firstCard = galleryGrid.querySelector('.gallery_card');
+    if (!firstCard) return 0;
+    const cardRect = firstCard.getBoundingClientRect();
+    const styles = window.getComputedStyle(galleryGrid);
+    const gap = parseFloat(styles.columnGap || styles.gap || '0');
+    return Math.max(1, Math.round(cardRect.width + gap));
+  }
+
+  function updateGalleryButtons() {
+    if (!galleryGrid || !galleryPrev || !galleryNext) return;
+    const maxScroll = galleryGrid.scrollWidth - galleryGrid.clientWidth;
+    galleryPrev.disabled = galleryGrid.scrollLeft <= 1;
+    galleryNext.disabled = galleryGrid.scrollLeft >= maxScroll - 1;
+  }
+
+  function scrollGallery(direction) {
+    if (!galleryGrid) return;
+    const step = getGalleryStep() || galleryGrid.clientWidth;
+    galleryGrid.scrollBy({ left: direction * step, behavior: 'smooth' });
+  }
+
+  if (galleryPrev && galleryNext && galleryGrid) {
+    galleryPrev.addEventListener('click', () => scrollGallery(-1));
+    galleryNext.addEventListener('click', () => scrollGallery(1));
+    galleryGrid.addEventListener('scroll', updateGalleryButtons, { passive: true });
+    window.addEventListener('resize', updateGalleryButtons);
+    updateGalleryButtons();
+  }
+
   // ---------- 초기화: 저장된 언어 적용
   applyLanguage();
 })();
